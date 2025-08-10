@@ -1,0 +1,250 @@
+/* Configurações Gerais */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #0056FB;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  width: 100%;
+  height: 100dvh;
+}
+
+/* ESQUERDA */
+
+.esquerda {
+  width: 50%;
+  background-color: var(--white);
+}
+
+.direita {
+  width: 50%;
+  background-color: var(--blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  height: 40px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  font-size: 15px;
+  width: 400px;
+  color: var(--black);
+}
+
+input[type="text"]::placeholder , input[type="password"]::placeholder, input[type="email"]::placeholder {
+  color: var(--black);
+}
+
+input[type="submit"] {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.links a {
+  color: var(--black);
+  font-weight: bold;
+  text-decoration: none;
+  user-select: none;
+}
+
+.icone-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: -45px;
+  bottom: -8%;
+  pointer-events: none;
+}
+
+.icone-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: -45px;
+  bottom: -5%;
+  pointer-events: none;
+}
+
+#icone {
+  opacity: 25%;
+}
+
+/* DIREITA */
+
+.texts, .texts-cadastro {
+  color: var(--white);
+}
+
+.texts h1, .texts-cadastro h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 1.4px;
+}
+
+.texts p, .texts-cadastro p {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 2px;  
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+form label {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* DESIGN RESPOSIVO */
+
+@media screen and (max-width: 1635px) {
+  
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    height: 80dvh;
+  }
+
+  .container {
+    max-width: 500px;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0 16px ;
+  }
+
+  .esquerda, .direita {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  
+.direita .imagem img {
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width: 520px) {
+  
+  .icone-cadastro {
+    display: none;
+  }
+
+  .direita .texts-cadastro {
+    margin-left: 15px;
+  }
+  
+  .direita .texts-cadastro h1 {
+    font-size: 40px;
+  }
+  
+  .direita .texts-cadastro p {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .direita .texts {
+    margin-left: 15px;
+  }
+
+  .direita .texts h1 {
+    font-size: 40px;
+  }
+
+  .direita .texts p {
+    font-size: 15px;
+  }
+
+  .icone-content {
+    display: none;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    width: 90dvw;
+  }
+
+}
+
+@media screen and (max-height: 750px) {
+  
+  .imagem {
+    display: none;
+  }
+
+}
+
+@media screen and (max-height: 500px) {
+  
+  main {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .direita {
+    display: none;
+  }
+
+}
